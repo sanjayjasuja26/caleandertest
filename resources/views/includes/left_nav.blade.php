@@ -6,15 +6,15 @@
                         <img alt="image" class="img-circle" src="/inspinia/img/profile_small.jpg" />
                          </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{$user->name}}</strong>
-                        </span> <span class="text-muted text-xs block">{{$user->role->name}}</span> </span> </a>
+                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{Auth::user()->name}}</strong>
+                        </span> <span class="text-muted text-xs block">{{Auth::user()->role->name}}</span> </span> </a>
 
                 </div>
             </li>
-            
+
             @if(Auth::user()->role->name=='admin')
             <li>
-                <a href="#"><i class="fa fa-laptop"></i> <span class="nav-label">Manage User</span></a>
+                <a href="/manageuser"><i class="fa fa-laptop"></i> <span class="nav-label">Manage User</span></a>
             </li>
             @endif
 

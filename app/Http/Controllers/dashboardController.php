@@ -10,7 +10,7 @@ class dashboardController extends Controller
     public function index()
     {
 
-      $data['user'] = Auth::user();
-      return view('dashboard.index',$data);
+
+      return view('dashboard.index');
     }
 }
