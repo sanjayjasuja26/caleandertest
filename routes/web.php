@@ -18,4 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 
+
 Route::get('/dashboard', 'dashboardController@index');
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
