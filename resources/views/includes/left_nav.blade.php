@@ -22,6 +22,14 @@
             <li>
                 <a href="#"><i class="fa fa-laptop"></i> <span class="nav-label">test</span></a>
             </li>
+            <li>
+                <a href="/caleander"><i class="fa fa-calendar" aria-hidden="true"></i> <span class="nav-label">Caleander</span></a>
+            </li>
+            @if(Session::has('adminId'))
+            <li>
+                <a href="/manageuser/access/{{Session::get('adminId')}}"><i class="fa fa-laptop"></i> <span class="nav-label">Return Back</span></a>
+            </li>
+            @endif
             @endif
 
 

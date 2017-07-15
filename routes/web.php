@@ -11,14 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
-
-
-
-Route::get('/dashboard', 'dashboardController@index');
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-Route::get('/manageuser', 'Admincontroller@index');
+
+
+Route::group(['middleware' => 'auth'], function () {
+
+        Route::get('/dashboard', 'dashboardController@index');
+        Route::get('/caleander', 'CaleanderController@getindex');
+
+
+    });
+
+Route::group(['prefix'=>'/manageuser', 'middleware'=>'auth'],function()
+  {
+
+    Route::get('/', 'Admincontroller@index');
+    Route::get('/view/{id}', 'Admincontroller@getview');
+    Route::get('/access/{id}', 'Admincontroller@getaccess');
+
+
+  });
