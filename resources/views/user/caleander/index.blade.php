@@ -429,4 +429,18 @@
                     </div>
                 </div> -->
 
+                  <div id="calendarCantainer" class="calendarStyle"></div>
+
   @endsection
+
+  @section('extra_script')
+<script type="text/javascript">
+$(document).ready(function() {
+
+		$('#calendarCantainer').fullCalendar({
+
+		});
+
+	});
+</script>
+@endsection
