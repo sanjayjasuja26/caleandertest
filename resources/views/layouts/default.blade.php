@@ -10,6 +10,7 @@
 
     <link href="/inspinia/css/bootstrap.min.css" rel="stylesheet">
     <link href="/inspinia/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
 <!--caleander css-->
 
   <link href="/inspinia/css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
@@ -51,8 +52,18 @@
 
     <!-- Custom and plugin javascript -->
     <script src="/inspinia/js/plugins/pace/pace.min.js"></script>
+
+
+<!-- iCheck -->
+<script src="/inspinia/js/plugins/iCheck/icheck.min.js"></script>
+
 <!--caleander js-->
+<!-- Full Calendar -->
 <script src="/inspinia/js/plugins/fullcalendar/moment.min.js"></script>
+<script src="/inspinia/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+
+
 @yield('extra_script')
 
 
