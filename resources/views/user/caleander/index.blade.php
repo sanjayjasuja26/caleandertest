@@ -55,9 +55,7 @@
   @endsection
 
   @section('extra_script')
-
-
-  <script>
+<script>
 
       $(document).ready(function() {
 
@@ -94,7 +92,6 @@
           var d = date.getDate();
           var m = date.getMonth();
           var y = date.getFullYear();
-
           $('#calendar').fullCalendar({
               header: {
                   left: 'prev,next today',
@@ -129,7 +126,7 @@
                   {
                       id: 999,
                       title: 'Repeating Event',
-                      start: new Date(y, m, d+4, 16, 0),
+                      start: new Date(y, m, d+4 , 16, 0),
                       allDay: false
                   },
                   {
