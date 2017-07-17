@@ -12,6 +12,10 @@
     <link href="/inspinia/font-awesome/css/font-awesome.css" rel="stylesheet">
 <!--caleander css-->
 
+  <link href="/inspinia/css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+  <link href="/inspinia/css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
+
+
 
 
 
@@ -48,6 +52,8 @@
     <!-- Custom and plugin javascript -->
     <script src="/inspinia/js/plugins/pace/pace.min.js"></script>
 <!--caleander js-->
+<script src="/inspinia/js/plugins/fullcalendar/moment.min.js"></script>
+@yield('extra_script')
 
 
 
