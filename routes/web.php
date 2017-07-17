@@ -31,6 +31,8 @@ Route::group(['prefix'=>'/manageuser', 'middleware'=>'auth'],function()
     Route::get('/', 'Admincontroller@index');
     Route::get('/view/{id}', 'Admincontroller@getview');
     Route::get('/access/{id}', 'Admincontroller@getaccess');
+    Route::get('/event/{id}', 'Admincontroller@getEventIndex');
+    Route::get('/event/create/{id}', 'Admincontroller@getCreateEvent');
 
 
   });

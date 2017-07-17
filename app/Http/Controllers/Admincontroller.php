@@ -50,4 +50,15 @@ class Admincontroller extends Controller
      return redirect('/');
     }
     }
+    public function getEventIndex($id)
+    {
+      $data['userId'] =  $id;
+
+     return view('admin.manageuser.event.index',$data);
+    }
+    public function getCreateEvent($userId)
+    {
+      $data['userId'] = $userId;
+    return view('admin.manageuser.event.form',$data);
+    }
 }
