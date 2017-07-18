@@ -22,7 +22,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/dashboard', 'dashboardController@index');
         Route::get('/caleander', 'CaleanderController@getindex');
 
-
     });
 
 Route::group(['prefix'=>'/manageuser', 'middleware'=>'auth'],function()
@@ -33,6 +32,7 @@ Route::group(['prefix'=>'/manageuser', 'middleware'=>'auth'],function()
     Route::get('/access/{id}', 'Admincontroller@getaccess');
     Route::get('/event/{id}', 'Admincontroller@getEventIndex');
     Route::get('/event/create/{id}', 'Admincontroller@getCreateEvent');
+    Route::post('/event/create', 'Admincontroller@getstoreEvent');
 
 
   });
