@@ -63,6 +63,10 @@
 <script src="/inspinia/js/plugins/fullcalendar/fullcalendar.min.js"></script>
 
 
+<link rel="stylesheet" type="text/css"
+    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css"></link>
+
+
 
 @yield('extra_script')
 
