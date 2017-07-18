@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\Event;
 
 class Admincontroller extends Controller
 {
@@ -60,5 +61,17 @@ class Admincontroller extends Controller
     {
       $data['userId'] = $userId;
     return view('admin.manageuser.event.form',$data);
+    }
+
+    public function getstoreEvent(Request $request)
+    {
+
+      $event = new Event;
+      $event->user_id = $request->user_id;
+      $event->date = $request->date;
+      $event->task = $request->task;
+      $event->save();
+      return back();
+
     }
 }
