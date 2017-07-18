@@ -16,7 +16,7 @@
   <link href="/inspinia/css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
   <link href="/inspinia/css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
 
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.css">
 
 
 

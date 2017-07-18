@@ -54,6 +54,7 @@ class Admincontroller extends Controller
     public function getEventIndex($id)
     {
       $data['userId'] =  $id;
+     $data['events'] = Event::where('user_id',$id)->get();
 
      return view('admin.manageuser.event.index',$data);
     }
@@ -65,13 +66,22 @@ class Admincontroller extends Controller
 
     public function getstoreEvent(Request $request)
     {
-
+  
       $event = new Event;
       $event->user_id = $request->user_id;
       $event->date = $request->date;
       $event->task = $request->task;
+      $event->enddate = $request->enddate;
+      $event->time = $request->time;
       $event->save();
-      return back();
+      return redirect('manageuser/event/'.$request->user_id);
 
+    }
+    public function eventDelete($id)
+    {
+      $event = Event::find($id);
+      if($event)
+         $event->delete();
+        return back();
     }
 }
