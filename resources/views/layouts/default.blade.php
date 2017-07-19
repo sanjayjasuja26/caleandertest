@@ -63,8 +63,10 @@
 <script src="/inspinia/js/plugins/fullcalendar/fullcalendar.min.js"></script>
 
 
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css"></link>
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css"></link>
+
+
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMzHr6VJOy9WoiAs6Dofg_iqMDCEtF95U&callback=initMap " async defer></script>
 
 
 

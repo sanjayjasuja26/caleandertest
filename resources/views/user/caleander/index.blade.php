@@ -72,7 +72,7 @@
         <div class="modal-body"  id="enddate">
         </div>
         <div class="modal-body" >
-       Time:
+         Time:
 
         </div>
         <div class="modal-body"  id="time">

@@ -21,6 +21,10 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/dashboard', 'dashboardController@index');
         Route::get('/caleander', 'CaleanderController@getindex');
+        Route::get('/map', 'MapController@index');
+        Route::get('/map/location/create', 'MapController@cretaeLocation');
+        Route::post('/map/location/create', 'MapController@storeLocation');
+        Route::get('/map/location/view/{id}', 'MapController@viewLocation');
 
     });
 
