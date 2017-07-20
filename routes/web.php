@@ -21,10 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/dashboard', 'dashboardController@index');
         Route::get('/caleander', 'CaleanderController@getindex');
-        Route::get('/map', 'MapController@index');
-        Route::get('/map/location/create', 'MapController@cretaeLocation');
-        Route::post('/map/location/create', 'MapController@storeLocation');
-        Route::get('/map/location/view/{id}', 'MapController@viewLocation');
+
 
     });
 
@@ -38,6 +35,16 @@ Route::group(['prefix'=>'/manageuser', 'middleware'=>'auth'],function()
     Route::get('/event/create/{id}', 'Admincontroller@getCreateEvent');
     Route::post('/event/create', 'Admincontroller@getstoreEvent');
     Route::get('/event/delete/{id}', 'Admincontroller@eventDelete');
+
+
+  });
+
+  Route::group(['prefix'=>'/map', 'middleware'=>'auth'],function()
+  {
+    Route::get('/', 'MapController@index');
+    Route::get('/location/create', 'MapController@cretaeLocation');
+    Route::post('/location/create', 'MapController@storeLocation');
+    Route::get('/location/view/{id}', 'MapController@viewLocation');
 
 
   });
