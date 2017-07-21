@@ -35,6 +35,7 @@ Route::group(['prefix'=>'/manageuser', 'middleware'=>'auth'],function()
     Route::get('/event/create/{id}', 'Admincontroller@getCreateEvent');
     Route::post('/event/create', 'Admincontroller@getstoreEvent');
     Route::get('/event/delete/{id}', 'Admincontroller@eventDelete');
+    Route::get('map/{id}', 'Admincontroller@mapTask');
 
 
   });

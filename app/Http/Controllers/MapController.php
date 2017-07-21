@@ -27,7 +27,7 @@ class MapController extends Controller
     $location->user_id = Auth::id();
     $location->save();
 
-    return redirect('/map');
+    return back();
 
   }
   public function viewLocation($id)

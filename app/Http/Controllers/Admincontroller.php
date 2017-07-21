@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Event;
-
+use App\Location;
 class Admincontroller extends Controller
 {
     public function index()
@@ -66,7 +66,7 @@ class Admincontroller extends Controller
 
     public function getstoreEvent(Request $request)
     {
-  
+
       $event = new Event;
       $event->user_id = $request->user_id;
       $event->date = $request->date;
@@ -83,5 +83,12 @@ class Admincontroller extends Controller
       if($event)
          $event->delete();
         return back();
+    }
+    public function mapTask($id)
+    {
+
+      $data['locations'] =Location::where('user_id',$id)->first();
+
+      return view('admin.manageuser.map.index1',$data);
     }
 }

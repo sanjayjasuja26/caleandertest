@@ -50,6 +50,7 @@
                                               <a href="/manageuser/view/{{$user->id}}" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i>view</a>
                                               <a href="/manageuser/access/{{$user->id}}" class="btn btn-primary"><i class="fa fa-key" aria-hidden="true"></i> access</a>
                                               <a href="/manageuser/event/{{$user->id}}" class="btn btn-primary"><i class="fa fa-calendar-o" aria-hidden="true"></i> Event</a>
+                                                <a href="/manageuser/map/{{$user->id}}" class="btn btn-primary"><i class="fa fa-globe" aria-hidden="true"></i>Map Task</a>
                                           </td>
                                       </tr>
                                     @endforeach
