@@ -69,9 +69,9 @@
 
         });
 
-        marker.addListener('click', function() {
-         infowindow.open(map, marker);
-       });
+          marker.addListener('click', function() {
+           infowindow.open(map, marker);
+         });
 
 
 

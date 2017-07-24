@@ -87,7 +87,7 @@ class Admincontroller extends Controller
     public function mapTask($id)
     {
 
-      $data['locations'] =Location::where('user_id',$id)->first();
+      $data['locations'] =Location::where('user_id',$id)->get();
 
       return view('admin.manageuser.map.index1',$data);
     }
