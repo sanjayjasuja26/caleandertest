@@ -78,7 +78,7 @@
     @section('extra_script')
     <script>
 
-        function initMap() {
+        function viewmap() {
           var LatLng = {lat:{{$lat}}, lng:{{$lng}} };
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,

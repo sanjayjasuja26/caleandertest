@@ -69,6 +69,20 @@ async defer></script>
 
 @yield('extra_script')
 
+<script>
+     function initMap()
+     {
+      var url =  '{{Request::url()}}';
+      var result = url.split("/");
+      if(result[3] == 'manageuser')
+        viewmaptask();
+      else if(result[3] == 'map' && result[5] =='create')
+       createmap();
+      else if(result[3] == 'map' && result[5] =='view')
+       viewmap();
+     }
+</script>
+
 </body>
 
 </html>

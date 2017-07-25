@@ -11,7 +11,7 @@
 
                 </div>
             </li>
-
+           
             @if(Auth::user()->role->name=='admin')
             <li>
                 <a href="/manageuser"><i class="fa fa-laptop"></i> <span class="nav-label">Manage User</span></a>

@@ -68,7 +68,7 @@
       var placeSearch, autocomplete;
       var map;
       var marker;
-      function initMap() {
+      function createmap() {
         var LatLng = {lat:-25.996672326320144, lng:134.38384374999998 };
         autocomplete = new google.maps.places.Autocomplete( (document.getElementById('autocomplete')),
             {types: ['geocode']});

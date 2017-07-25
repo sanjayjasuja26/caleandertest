@@ -23,6 +23,8 @@
 
             <div id="map" style="height:700px"></div>
 
+            
+
 
   @endsection
 
@@ -32,7 +34,7 @@
 
 
      var map;
-     function initMap() {
+     function viewmaptask() {
        map = new google.maps.Map(document.getElementById('map'), {
          center: {lat: 20.5937, lng: 78.9629},
          zoom: 3
@@ -41,24 +43,14 @@
   @if(count($locations) > 0);
 
        @foreach($locations as $location)
-
-
-
-
          var location = new google.maps.LatLng('{{$location->lat}}', '{{$location->lng}}');
          var marker = new google.maps.Marker({
            position: location,
            map: map,
            title: 'LatLng (Ayers Rock)'
-
          });
-
-
-
        var infoWindow = new google.maps.InfoWindow();
-
        google.maps.event.addListener(marker, 'click', function () {
-
                 var markerContent = '<div id="content">'+
                    '<div id="siteNotice">'+
                    '</div>'+
@@ -72,9 +64,7 @@
                 infoWindow.setContent(markerContent);
                 infoWindow.open(map, this);
             });
-
       @endforeach
-
      @endif
 
 
